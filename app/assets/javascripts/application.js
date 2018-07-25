@@ -17,3 +17,12 @@
 //= require popper
 //= require bootstrap
 //= require_tree .
+
+$(document).ready(function() {
+    var $myGroup = $('#myContent');
+    $myGroup.on('show.bs.collapse','.collapse', function() {
+        $myGroup.find('.collapse.show').collapse('hide');
+    });
+});
+
+

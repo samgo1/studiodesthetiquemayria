@@ -1,26 +1,80 @@
 <!DOCTYPE html>
-<html class="h-100">
-  <head>
-    <title>Studiodesthetiquemayria</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+<html>
+<head>
+  <title>Studiodesthetiquemayria</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
 
-  <body class="h-100">
-    <!-- main container -->
-    <div class="container-fluid h-100" style="background-color: linen;">
-      <!-- header -->
-      <div class="row">
-        <div class="col">
-          <h1 class="text-center pt-2" style="font-family: 'Apple Braille';">Studio D'Ésthétique Mayria</h1>
-        </div>
-      </div>
-      <div class="row">
-        <%= yield %>
+<body>
+  <div class="container-fluid bg-light" id="myTopContainer">
+    <div id="myNavbar" class="row">
+      <div class="col pr-0 pl-0">
+        <nav class="navbar navbar-expand-md navbar-light bg-light">
+          <span class="navbar-brand mb-0 h1">Studio D'Esthetique Mayria</span>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="collapse" href="#accueil" aria-expanded="true" aria-controls="accueil">Accueil</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="collapse" href="#soinsVisage" aria-expanded="false" aria-controls="soinsVisage">Soins du visage</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="collapse" href="#electrolyse" aria-expanded="false" aria-controls="electrolyse">Electrolyse</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="collapse" href="#epilation" aria-expanded="false" aria-controls="epilation">Epilation</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="collapse" href="#produits" aria-expanded="false" aria-controls="produits">Produits</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
       </div>
     </div>
-  </body>
+    <div id="myAdress" class="row">
+      <div class="col">
+        <div class="text-center font-italic">327 Vallée, Sainte-Anne-De-Bellevue</div>
+        <div class="text-center font-italic">H9X 3W3</div>
+        <div class="text-center font-italic">514 346-6669</div>
+      </div>
+    </div>
+    <div id="myBody" class="row">
+      <div id="myCarousel" class="col-md-6">Img changer</div>
+      <div id="myContent" class="col-md-6">
+        <div class="collapse show" id="accueil">
+          <p>
+            Le Studio D'Ésthétique Mayria est un espace de beauté, des plus accueillant et chaleureux. Expérimenté de plus de 30
+            ans, dans un seul but de vous offrir le meilleur soin.
+          </p>
+        </div>
+        <div class="collapse" id="soinsVisage">
+          soins visage text
+        </div>
+        <div class="collapse" id="electrolyse">
+          electrolyse text
+        </div>
+        <div class="collapse" id="epilation">
+          epilation text
+        </div>
+        <div class="collapse" id="produits">
+          les produits
+        </div>
+      </div>
+    </div>
+    <div id="myFooter" class="row">
+      <div class="col">Les Heures</div>
+    </div>
+  </div>
+</body>
 </html>
